@@ -10,9 +10,9 @@ public interface PostingsRepository {
 
     public Post getById(Long postId);
 
-    public String create(Post post);
+    public int create(Post post);
 
-    public Post update(Long id, Post post);
+    public int update(Post post);
 
-    public String delete(Long id);
+    public int delete(Long id);
 }

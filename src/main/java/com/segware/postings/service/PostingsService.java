@@ -10,10 +10,10 @@ public interface PostingsService {
 
     public Post getPostById(Long postId);
 
-    public String createPost(Post post);
+    public int createPost(Post post);
 
-    public Post updatePost(Long id, Post post);
+    public int updatePost(Post post);
 
-    public String deletePost(Long id);
+    public int deletePost(Long id);
 
 }

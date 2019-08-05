@@ -12,16 +12,12 @@ public class Post implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private final String title;
-    private final String comments;
-    private final int likes;
-    private final int unlikes;
+    private String title;
+    private String comments;
+    private int likes;
+    private int unlikes;
 
     public Post() {
-        this.title = null;
-        this.comments = null;
-        this.likes = 0;
-        this.unlikes = 0;
     }
 
     public Post(String title, String comments, int likes, int unlikes) {
@@ -43,16 +39,32 @@ public class Post implements Serializable {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getComments() {
         return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     public int getLikes() {
         return likes;
     }
 
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
     public int getUnlikes() {
         return unlikes;
+    }
+
+    public void setUnlikes(int unlikes) {
+        this.unlikes = unlikes;
     }
 
     @Override
