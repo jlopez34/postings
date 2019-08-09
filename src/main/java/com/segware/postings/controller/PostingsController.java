@@ -28,6 +28,7 @@ public class PostingsController {
     }
 
     @GetMapping("/")
+    @CrossOrigin(origins = "http://localhost:4200")
     public @ResponseBody
     ResponseEntity<List<Post>> getPosting() {
         logger.info("Consuming getPosting");
@@ -37,6 +38,7 @@ public class PostingsController {
     }
 
     @GetMapping("/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
     public @ResponseBody
     ResponseEntity<Post> getPostById(@PathVariable String id) {
         logger.info("Consuming getPostById");
@@ -46,6 +48,7 @@ public class PostingsController {
 
 
     @PostMapping("/")
+    @CrossOrigin(origins = "http://localhost:4200")
     public @ResponseBody
     ResponseEntity<String> createPost(@RequestBody Post newPost) {
         logger.info("Consuming createPost");
@@ -63,6 +66,7 @@ public class PostingsController {
     }
 
     @PutMapping("/")
+    @CrossOrigin(origins = "http://localhost:4200")
     public @ResponseBody
     ResponseEntity<Post> updatePost(@RequestBody Post post) {
         logger.info("Consuming updatePost");
@@ -75,6 +79,7 @@ public class PostingsController {
     }
 
     @DeleteMapping("/{id}")
+    @CrossOrigin(origins = "http://localhost:4200")
     public @ResponseBody
     ResponseEntity<Object> deletePost(@PathVariable Long id) {
         logger.info("Consuming deletePost");
