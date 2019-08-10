@@ -16,7 +16,7 @@ import java.util.List;
 import static java.lang.Integer.*;
 
 @RestController
-@Profile("prod")
+//@Profile("prod")
 @RequestMapping(path = "/postings")
 public class PostingsController {
 
