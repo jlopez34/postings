@@ -22,10 +22,10 @@ export default class AppNavbar extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink href="https://twitter.com/soytomas28">@soytomas28</NavLink>
+                        <NavLink href="https://www.instagram.com/jal_souza/">@jal_souza</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://github.com/jlopez34/postings">GitHub</NavLink>
+                        <NavLink href="https://github.com/jlopez34/">GitHub</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>

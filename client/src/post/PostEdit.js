@@ -54,7 +54,6 @@ class PostEdit extends Component {
 
     render() {
         const { item } = this.state;
-        const title = <h2>{item.id ? 'Edit Post' : 'Add Post'}</h2>
 
         return <div>
             <AppNavbar />

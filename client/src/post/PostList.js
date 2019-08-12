@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, ButtonGroup, Container, Table } from "reactstrap";
+import { Button, Container, Table } from "reactstrap";
 import AppNavbar from '../AppNavbar';
 import { Link } from "react-router-dom";
 
@@ -58,6 +58,7 @@ class PostList extends Component {
 
         const postList = posts.map(post => {
             const title = `${post.title || ''}`;
+            const postID = `/postings/${post.id}`;
             return <div className="card gedf-card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
@@ -74,7 +75,7 @@ class PostList extends Component {
 
                 </div>
                 <div class="card-body">
-                    <a class="card-link" href="#">
+                    <a class="card-link" href={postID}>
                         <h5 class="card-title">{title}</h5>
                     </a>
 
