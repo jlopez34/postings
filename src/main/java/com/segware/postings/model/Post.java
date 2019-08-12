@@ -1,17 +1,26 @@
 package com.segware.postings.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@ApiModel(description = "All details about the Post.")
 public class Post implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @ApiModelProperty(notes = "The database generated post ID")
     private int id;
+    @ApiModelProperty(notes = "The post title")
     private String title;
+    @ApiModelProperty(notes = "The post comment")
     private String comments;
+    @ApiModelProperty(notes = "The post likes")
     private int likes;
+    @ApiModelProperty(notes = "The post dislikes")
     private int unlikes;
 
     public Post() {

@@ -3,6 +3,8 @@ package com.segware.postings.controller;
 
 import com.segware.postings.model.Post;
 import com.segware.postings.service.PostingsService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +17,14 @@ import java.util.List;
 
 import static java.lang.Integer.*;
 
+/**
+ * PostingsController class
+ * @author Jaime Lopez
+ * @Since 1.0.0
+ */
 @RestController
-//@Profile("prod")
 @RequestMapping(path = "/postings")
+@Api(value = "Postings microservice", description = "This API is used to manager posting")
 public class PostingsController {
 
     public static final Logger logger = LoggerFactory.getLogger(PostingsController.class);
@@ -30,6 +37,7 @@ public class PostingsController {
     }
 
     @GetMapping("/")
+    @ApiOperation(value = "Find All Postings", notes = "Return every postings registered" )
     public @ResponseBody
     ResponseEntity<List<Post>> getPosting() {
         logger.info("Consuming getPosting");
@@ -39,6 +47,7 @@ public class PostingsController {
     }
 
     @GetMapping("/{id}")
+    @ApiOperation(value = "Find posting by id", notes = "Return an especific post registered" )
     public @ResponseBody
     ResponseEntity<Post> getPostById(@PathVariable String id) {
         logger.info("Consuming getPostById");
@@ -48,6 +57,7 @@ public class PostingsController {
 
 
     @PostMapping("/")
+    @ApiOperation(value = "Create a new post", notes = "Return a message CREATED o OK depend on method success" )
     public @ResponseBody
     ResponseEntity<String> createPost(@RequestBody Post newPost) {
         logger.info("Consuming createPost");
@@ -65,6 +75,7 @@ public class PostingsController {
     }
 
     @PutMapping("/")
+    @ApiOperation(value = "Update postings", notes = "Return Post objected updated before execute method" )
     public @ResponseBody
     ResponseEntity<Post> updatePost(@RequestBody Post post) {
         logger.info("Consuming updatePost");
@@ -77,6 +88,7 @@ public class PostingsController {
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation(value = "Delete Posting", notes = "Return a message depend on method success" )
     public @ResponseBody
     ResponseEntity<Object> deletePost(@PathVariable Long id) {
         logger.info("Consuming deletePost");
