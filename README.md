@@ -27,9 +27,7 @@ Java API [postings.1.0.0.jar] using Spring Boot 2.0.6, that artefact was documen
 
 2. cd postings
 
-3. git checkout app-react
-
-4. mvn package
+3. mvn package
 
 5. cd posting/target/
 
