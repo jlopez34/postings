@@ -1,18 +1,40 @@
 # Postings
 
-Desenvolver uma aplicação onde podem ser postados textos, livremente, e estes possam ter "up votes".
-A aplicação deve permitir:
+Develop an application where texts could be posted freely, and these can have upvotes.
+The application must allow:
 
--	listar os posts atuais e seus upvotes recebidos.
-	-	adicionar novo post.
-	-	adicionar upvote a um post.
+- List current posts and their received upvotes.
+- add a new post.
+- add upvote to a post.
 
-O projeto de back end deve ser escrito em Spring Boot (https://start.spring.io) e deve expor uma API a ser consumida por uma aplicação frontend escrita em uma linguagem de sua escolha (de preferência ReactJS), persistindo os dados em um banco de dados de sua preferência.
+The backend project should be written in Spring Boot (https://start.spring.io). It should expose an API to be consumed by a frontend application written in a language of your choice (preferably ReactJS), persisting the data. In a database of your choice.
 
-Fique à vontade quanto a estilos e organização, o objetivo principal deste desafio é validar suas habilidades nas linguagens e frameworks solicitados, bem como a qualidade de código.
+Feel free about styles and organization; the primary goal of this challenge is to validate your skills in the requested languages ​​and frameworks, as well as code quality.
 
--Para concluir seu teste, você deve:
-  -incluir testes unitários e de integração;
-  - não deve ser necessário nenhum setup de ambiente para rodar os testes. Caso necessário setup de ambiente para rodar os testes     ou a aplicação, o mesmo deve ser automatizado através de um único comando;
+To complete your test, you must:
+Include unit and integration tests;
+  - No environment setup should be required to run the tests. If environment setup is required to run the tests or the application, it must be automated with a single command;
 
-## Solucao: 
+## Implementation: 
+
+
+Implementation:
+
+It was developed the following solution:
+Java API [postings.1.0.0.jar] using Spring Boot 2.0.6, that artefact was documented below Swagger framework, also was created an interface on React JavaScript library to manager post, it necessary to follow the next steps to putting solution run:
+
+1. git clone https://github.com/jlopez34/postings
+
+2. cd postings
+
+3. git checkout app-react
+
+4. mvn package
+
+5. cd posting/target/
+
+6. java -jar posting.1.0.0.jar
+
+7. http://localhost:8080 on the browser that you prefer.
+
+8. http://localhost:8080/swagger-ui.html/ api documentation
